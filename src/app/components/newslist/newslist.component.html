@@ -1,0 +1,8 @@
+<div class="container text-center">
+    <h3 class="text-center">Top News Headlines - {{category | uppercase}}</h3>
+    <app-newsitem [newsList]="newsList"></app-newsitem>
+    <div class="container">
+        <button [disabled]="currPage <= 1" type="button" class="btn btn-dark" (click)="prevPage()">&larr;</button>
+        <button [disabled]="currPage === totalPages" type="button" class="btn btn-dark mx-1" (click)="nextPage()">&rarr;</button>
+    </div>
+</div>
